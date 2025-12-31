@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 45 30% 98%;
+    --foreground: 150 10% 15%;
+
+    --card: 0 0% 100%;
+    --primary: 145 63% 42%;
+    --secondary: 35 30% 93%;
+    --muted: 45 20% 92%;
+    --accent: 25 95% 53%;
+    --border: 45 20% 88%;
+
+    --radius: 0.75rem;
+
+    --grade-a: 145 70% 45%;
+    --grade-b: 85 60% 45%;
+    --grade-c: 45 90% 50%;
+    --grade-d: 25 90% 55%;
+    --grade-e: 0 75% 55%;
+  }
+
+  .dark {
+    --background: 150 15% 8%;
+    --foreground: 45 20% 95%;
+    --card: 150 12% 12%;
+    --border: 150 10% 20%;
+  }
+}
+
+/* ------------------------------
+   GLOBAL BASE STYLES
+--------------------------------*/
+@layer base {
+  * {
+    box-sizing: border-box;
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: "DM Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+/* ------------------------------
+   UTILITIES
+--------------------------------*/
+@layer utilities {
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  .page-title {
+    @apply text-3xl md:text-4xl font-bold text-center;
+  }
+
+  .card {
+    background-color: hsl(var(--card));
+    border-radius: var(--radius);
+    box-shadow: 0 4px 20px -4px rgb(0 0 0 / 0.08);
+    padding: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px -6px rgb(0 0 0 / 0.15);
+  }
+
+  .glass {
+    background-color: hsl(var(--card) / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .btn-primary {
+    background-color: hsl(var(--primary));
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius);
+    font-weight: 500;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+}
+
+/* ------------------------------
+   NUTRITION BADGES
+--------------------------------*/
+.nutri-a { background: hsl(var(--grade-a) / 0.15); color: hsl(var(--grade-a)); }
+.nutri-b { background: hsl(var(--grade-b) / 0.15); color: hsl(var(--grade-b)); }
+.nutri-c { background: hsl(var(--grade-c) / 0.15); color: hsl(var(--grade-c)); }
+.nutri-d { background: hsl(var(--grade-d) / 0.15); color: hsl(var(--grade-d)); }
+.nutri-e { background: hsl(var(--grade-e) / 0.15); color: hsl(var(--grade-e)); }
+
+/* ------------------------------
+   SCROLLBAR
+--------------------------------*/
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 999px;
+}
