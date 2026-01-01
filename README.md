@@ -7,57 +7,57 @@ This project allows users to explore food products, search by name, filter by ca
 
 This application fetches food product data from the OpenFoodFacts public API and presents it in a clean, responsive UI with features commonly used in real-world e-commerce and food-tech applications.
 
-1.It demonstrates:
-2.API integration
-3.Infinite scrolling
-4.Search & filtering
-5.Client-side sorting
-6.Dynamic routing
-7.Modular frontend architecture
+* It demonstrates:
+* API integration
+* Infinite scrolling
+* Search & filtering
+* Client-side sorting
+* Dynamic routing
+* Modular frontend architecture
 
 # 🚀 Project Overview
 
 This application fetches food product data from the OpenFoodFacts public API and presents it in a clean, responsive UI with features commonly used in real-world e-commerce and food-tech applications.
 
-1.It demonstrates:
-2.API integration
-3.Infinite scrolling
-4.Search & filtering
-5.Client-side sorting
-6.Dynamic routing
-7.Modular frontend architecture
+* It demonstrates:
+* API integration
+* Infinite scrolling
+* Search & filtering
+* Client-side sorting
+* Dynamic routing
+* Modular frontend architecture
 
 # 🎯 Key Features
 # 1.Infinite Scroll Product Listing
 
-1.Products load page-by-page as the user scrolls
-2.Improves performance and user experience
-3.Avoids loading all data at once
+* Products load page-by-page as the user scrolls
+* Improves performance and user experience
+* Avoids loading all data at once
 
 # 2. Search Products by Name
 
-1.Search food items using keywords
-2.Automatically resets pagination
-3.Works seamlessly with infinite scrolling
+* Search food items using keywords
+* Automatically resets pagination
+* Works seamlessly with infinite scrolling
 
 # 3. Barcode-Based Product Search
 
-1.Fetches a single product using barcode
-2.Useful for food scanning apps
-3.Stops infinite scroll for single result
+* Fetches a single product using barcode
+* Useful for food scanning apps
+* Stops infinite scroll for single result
 
 # 4. Category Filtering
 
-1.Filter food products by category
-2.Clears search state automatically
-3.Re-fetches products correctly
+* Filter food products by category
+* Clears search state automatically
+* Re-fetches products correctly
 
 # 5. Client-Side Sorting
 
 Sort products by:
-1.Name (A–Z, Z–A)
-2.Nutrition grade
-3.Sorting happens without extra API calls
+* Name (A–Z, Z–A)
+* Nutrition grade
+* Sorting happens without extra API calls
 
 # 6. Product Detail Page
 
@@ -77,30 +77,30 @@ Sort products by:
 
 # 🛠️ Tech Stack
 # Technology	                Usage
-React	                       Frontend UI
-Vite	                       Fast build & dev server
-Axios	                       API requests
-React Router DOM	           Routing
-Infinite Scroll Component	   Lazy loading
-Tailwind CSS	               Styling
-OpenFoodFacts API	           Food data
+* React	                       Frontend UI
+* Vite	                       Fast build & dev server
+* Axios	                       API requests
+* React Router DOM	           Routing
+* Infinite Scroll Component	   Lazy loading
+* Tailwind CSS	               Styling
+* OpenFoodFacts API	           Food data
 
 # 📂 Project Structure
 
-src/
-│── components/
-│   ├── Navbar.jsx
-│   ├── ProductCard.jsx
-│
-│── pages/
-│   ├── Home.jsx
-│   ├── ProductDetail.jsx
-│
-│── services/
-│   ├── api.js
-│
-│── App.jsx
-│── main.jsx
+* src/
+* │── components/
+* │   ├── Navbar.jsx
+* │   ├── ProductCard.jsx
+* │
+* │── pages/
+* │   ├── Home.jsx
+* │   ├── ProductDetail.jsx
+* │
+* │── services/
+* │   ├── api.js
+* │
+* │── App.jsx
+* │── main.jsx
 
 # Important & Famous Code Patterns (With Notes)
 
