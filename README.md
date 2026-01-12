@@ -86,84 +86,83 @@ Sort products by:
 * OpenFoodFacts API	           Food data
 
 # 📂 Project Structure
-
-* src/
-* │── components/
-* │   ├── Navbar.jsx
-* │   ├── ProductCard.jsx
-* │
-* │── pages/
-* │   ├── Home.jsx
-* │   ├── ProductDetail.jsx
-* │
-* │── services/
-* │   ├── api.js
-* │
-* │── App.jsx
-* │── main.jsx
-
+```js
+ src/
+ │── components/
+ │   ├── Navbar.jsx
+ │   ├── ProductCard.jsx
+ │
+ │── pages/
+ │   ├── Home.jsx
+ │   ├── ProductDetail.jsx
+ │
+ │── services/
+ │   ├── api.js
+ │
+ │── App.jsx
+ │── main.jsx
+```
 # Important & Famous Code Patterns (With Notes)
 
 # 1.Infinite Scroll Logic (Very Important)
-
-<InfiniteScroll
+```js
+InfiniteScroll
   dataLength={products.length}
   next={() => setPage(prev => prev + 1)}
   hasMore={hasMore}
->
-
+```
 * This is a real-world pagination pattern
 * Used in Instagram, Amazon, YouTube feeds
 * Avoids performance issues
 
 # 2.Reset Pagination on Filter Change
-
+```js
 useEffect(() => {
   setProducts([]);
   setPage(1);
   setHasMore(true);
 }, [query, category]);
-
+```
 
 * Prevents stale page data
 * Common bug in infinite-scroll apps
 * Interviewers LOVE this logic
 
 # 3.API Layer Abstraction 
-
+```js
 export const fetchProducts = async (page, category) => {
   return axios.get(...);
 };
-
+```
 * Separates UI & business logic
 * Makes code reusable & testable
 * Industry-standard practice
 
 # 4.Barcode Search API Call
-
+```js
 export const getProductByBarcode = async (barcode) => {
   return axios.get(
     `https://world.openfoodfacts.org/api/v0/product/${barcode}.json`
   );
 };
-
+```
 * Demonstrates REST API usage
 * Shows real-world use case (food scanning apps)
 
 # 5.Client-Side Sorting
-
+```js
 sorted.sort((a, b) =>
   (a.product_name || "").localeCompare(b.product_name || "")
 );
-
+```
 * Reduces backend dependency
 * Improves UI responsiveness
 * Common frontend optimization
 
 # Dynamic Routing with React Router
- 
+ ```js
  const { barcode } = useParams();
-
+```
 * Used in almost every real-world React app
 * Enables SEO-friendly URLs
 * Essential interview topic
@@ -187,12 +186,14 @@ sorted.sort((a, b) =>
 * Server-side pagination optimization
 
 # How to Run the Project
+```js
 npm install
 npm run dev
-
+```
 # API Used
 
 OpenFoodFacts API
+
 Base URL: https://world.openfoodfacts.org/
 
 Get products by category:
